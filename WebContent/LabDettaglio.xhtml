@@ -6,14 +6,23 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
-
+	<link rel="stylesheet" type="text/css" href="../resources/css/style.css"/>
+	<title>Dettaglio Laboratorio</title>
 </h:head>
 <h:body>
 
 	<f:view>
 		<h:form>
-			Laboratorio : <h:outputText value="#{labDettaglio.lab.title }" />
-			<h:dataTable value="#{labDettaglio.lab.partecipant1 }" var="rover">
+		
+		
+		
+			Laboratorio : <h:outputText value="#{labDettaglio.lab.title }" /><br/>
+			Slot:  <h:outputText value="#{labDettaglio.slot}" /><br/>
+			<h:dataTable value="#{labDettaglio.lab.partecipant1 }" var="rover"
+				styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+			>
 				<h:column>
 					<f:facet name="header">Nome Partecipante</f:facet>
 					<h:outputText value="#{rover.name }" />
