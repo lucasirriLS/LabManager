@@ -5,6 +5,8 @@ import java.io.Serializable;
 import it.rn14.managerlab.Event;
 
 public class Rover implements Serializable {
+	
+	private boolean selected;
 
 	/** Nome del rs */
 	private String name;
@@ -128,6 +130,12 @@ public class Rover implements Serializable {
 	}
 	public void setAssign3(Event assign3) {
 		this.assign3 = assign3;
+	}
+	public boolean isSelected() {
+		return selected;
+	}
+	public void setSelected(boolean selected) {
+		this.selected = selected;
 	}
 
 }
