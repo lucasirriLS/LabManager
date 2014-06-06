@@ -6,19 +6,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Dettaglio Laboratorio</title>
 </head>
 <body>
 	<f:view>
 	<h:form>
 			
-			Gestione Laboratori
+<!-- 			Gestione Laboratori -->
+<!-- 			<br/> -->
+<!-- 			Ricerche -->
+<%-- 			<h:commandButton value="Click Me" type="button" /> --%>
+			
 			<br/>
-			Ricerche
-			<h:commandButton value="Click Me" type="button" />
-			
-			
-			<h:dataTable>
+			Laboratorio : <h:outputText value="#{labDettaglio.lab.title }"/>
+			<h:dataTable value="#{labDettaglio.lab.partecipant1 }" var="rover">
+				<h:column>
+					<f:facet name="header">Nome Partecipante</f:facet>
+    				 <h:outputText value="#{rover.name }"/> 
+    			</h:column>
 				
 			</h:dataTable>
 			
