@@ -1,26 +1,36 @@
 .order-table{   
 	border-collapse:collapse;
-	background-color: rgb(241, 202, 202);
+	background-color: white;
 	
+}
+
+.order-table, td, th{
+	padding: 2px 2px 2px 2px;
+}
+
+.order-table, tr:HOVER{
+	background-color: orange;
 }
 
 .order-table-header{
 	text-align:left;
-	background:none repeat scroll 0 0 #E5E5E5;
+	color:white;
+	background:none repeat scroll 0 0 #A7C942;
 	border-bottom:1px solid #BBBBBB;
-	padding:5px;
+	
 }
 
 .order-table-odd-row{
 	text-align:left;
 	background:none repeat scroll 0 0 #FFFFFFF;
+	background-color: white;
 	border-top:1px solid #BBBBBB;
-	padding: 2px;
+	
 }
 
 .order-table-even-row{
 	text-align:left;
-	background:none repeat scroll 0 0 #F9F9F9;
+	background:none repeat scroll 0 0 #EAF2D3;
 	border-top:1px solid #BBBBBB;
 	padding-left: 2px;
 }

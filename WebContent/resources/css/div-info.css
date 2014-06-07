@@ -1,0 +1,12 @@
+.info {
+border: 2px solid #003B62;
+font-family: verdana;
+background-color: #DBF0C5;
+font-size: 12px;
+padding: 5px 5px 20px 5px;
+overflow-y: hidden;
+position: relative;
+overflow: auto;
+/* width: 470px; */
+margin-bottom: 5px;
+}

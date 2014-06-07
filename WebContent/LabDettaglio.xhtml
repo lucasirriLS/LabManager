@@ -15,10 +15,20 @@
 		<h:form>
 		
 		
-		
+		<h:panelGroup layout="block" id="container" styleClass="info">	
 			Laboratorio : <h:outputText value="#{labDettaglio.lab.title }" /><br/>
 			Slot:  <h:outputText value="#{labDettaglio.slot}" /><br/>
-			<h:dataTable value="#{labDettaglio.lab.partecipant1 }" var="rover"
+			Numero Rover iscritti : <h:outputText value="#{labDettaglio.numeroPartecipanti}" /><br/><br/>
+			Cambia Slot : 
+			<h:selectOneMenu value="#{labDettaglio.slot}"  onchange="submit()">
+	   			<f:selectItem itemValue="1" itemLabel="1 - Venerdi Mattina" />
+	   			<f:selectItem itemValue="2" itemLabel="2 - Venerdi pomeriggio" />
+	   			<f:selectItem itemValue="3" itemLabel="3 - Sabato mattina" />
+   			</h:selectOneMenu>
+			
+		</h:panelGroup>
+		
+			<h:dataTable value="#{labDettaglio.partecipanti }" var="rover"
 				styleClass="order-table"
     			headerClass="order-table-header"
     			rowClasses="order-table-odd-row,order-table-even-row"
@@ -35,6 +45,11 @@
 					<h:outputText value="#{rover.surname }" />
 				</h:column>
 
+				<h:column>
+					<f:facet name="header">Gruppo</f:facet>
+					<h:outputText value="#{rover.group.name }" />
+				</h:column>
+				
 			</h:dataTable>
 
 <!-- DIV RICERCA LAB DESTINAZIONE -->

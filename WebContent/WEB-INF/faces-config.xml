@@ -8,7 +8,7 @@
 	<managed-bean>
 		<managed-bean-name>labDettaglio</managed-bean-name>
 		<managed-bean-class>it.rn14.managerlab.lab.LabDettaglio</managed-bean-class>
-		<managed-bean-scope>request</managed-bean-scope>
+		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 
 </faces-config>
