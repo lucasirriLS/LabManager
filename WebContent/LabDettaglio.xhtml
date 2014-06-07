@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<link rel="stylesheet" type="text/css" href="../resources/css/style.css"/>
+	<title>Dettaglio Laboratorio</title>
+</h:head>
+<h:body>
+
+	<f:view>
+		<h:form>
+		
+		
+		
+			Laboratorio : <h:outputText value="#{labDettaglio.lab.title }" /><br/>
+			Slot:  <h:outputText value="#{labDettaglio.slot}" /><br/>
+			<h:dataTable value="#{labDettaglio.lab.partecipant1 }" var="rover"
+				styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+			>
+				<h:column>
+					<h:selectBooleanCheckbox value="#{rover.selected}" /> 
+				</h:column>
+				<h:column>
+					<f:facet name="header">Nome </f:facet>
+					<h:outputText value="#{rover.name }" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Cognome</f:facet>
+					<h:outputText value="#{rover.surname }" />
+				</h:column>
+
+			</h:dataTable>
+
+<!-- DIV RICERCA LAB DESTINAZIONE -->
+
+<div>
+<h:panelGrid columns="3">
+	<h:outputText value="Sottocampo"/>
+	<h:selectOneMenu>
+		<f:selectItem itemValue="1" itemLabel="1" />
+		<f:selectItem itemValue="2" itemLabel="2" />
+		<f:selectItem itemValue="3" itemLabel="3" />
+		<f:selectItem itemValue="4" itemLabel="4" />
+		<f:selectItem itemValue="5" itemLabel="5" />
+		<f:selectItem itemValue="6" itemLabel="6" />
+		
+	</h:selectOneMenu>
+</h:panelGrid>
+</div>
+
+<!-- DIV RICERCA LAB DESTINAZIONE -->
+
+
+
+
+
+		</h:form>
+	</f:view>
+
+</h:body>
+</html>
