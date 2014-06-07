@@ -14,7 +14,6 @@
 	<f:view>
 		<h:form>
 		
-		
 		<h:panelGroup layout="block" id="container" styleClass="info">	
 			Laboratorio : <h:outputText value="#{labDettaglio.lab.title }" /><br/>
 			Slot:  <h:outputText value="#{labDettaglio.slot}" /><br/>
@@ -50,6 +49,26 @@
 					<h:outputText value="#{rover.group.name }" />
 				</h:column>
 				
+
+			Laboratorio : <h:outputText value="#{labDettaglio.lab.title }" /><br/>
+			Slot:  <h:outputText value="#{labDettaglio.slot}" /><br/>
+			<h:dataTable value="#{labDettaglio.lab.partecipant1 }" var="rover"
+				styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+			>
+				<h:column>
+					<h:selectBooleanCheckbox value="#{rover.selected}" /> 
+				</h:column>
+				<h:column>
+					<f:facet name="header">Nome </f:facet>
+					<h:outputText value="#{rover.name }" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Cognome</f:facet>
+					<h:outputText value="#{rover.surname }" />
+				</h:column>
+
 			</h:dataTable>
 
 <!-- DIV RICERCA LAB DESTINAZIONE -->
